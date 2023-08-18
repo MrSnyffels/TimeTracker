@@ -1,0 +1,32 @@
+<!--// This code creates a login form and a work area. The login form asks the user for their name, and then displays a welcome message in the work area. 
+The work area also contains buttons to start, pause, and stop working, as well as a log area to display any logs. 
+The code also includes the functions to start, pause, and stop working, as well as the function to display the welcome message.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form id="loginForm" class="center">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button type="submit">Login</button>
+    </form>
+
+
+    <div id="workArea" class="hidden center">
+        <h2>Welcome, <span id="welcomeUser"></span></h2>
+        <div class="button-container"> 
+            <button onclick="startWork()">Start</button>
+            <button onclick="pauseWork()">Pause</button>
+            <button onclick="stopWork()">Stop</button>
+        </div>
+        <div id="logs"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
